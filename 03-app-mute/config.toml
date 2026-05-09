@@ -1,0 +1,8 @@
+[hotkeys]
+f1 = "chrome"
+f2 = "spotify"
+"ctrl+alt+m" = "discord"
+"ctrl+alt+1" = "chrome"
+
+[general]
+check_interval = 1000

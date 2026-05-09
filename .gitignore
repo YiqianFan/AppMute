@@ -1,0 +1,23 @@
+# Build artifacts
+bin/
+obj/
+target/
+__pycache__/
+*.pyc
+*.exe
+*.dll
+*.pdb
+
+# Logs
+*.log
+
+# IDE
+.vs/
+.vscode/
+.idea/
+*.user
+*.suo
+
+# OS
+Thumbs.db
+Desktop.ini

@@ -1,0 +1,22 @@
+[package]
+name = "app-mute"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+log = "0.4"
+simplelog = "0.12"
+toml = "0.8"
+windows = { version = "0.62", features = [
+    "Win32_Foundation",
+    "Win32_System_Com",
+    "Win32_System_Threading",
+    "Win32_Media_Audio",
+    "Win32_UI_WindowsAndMessaging",
+] }
+
+[profile.release]
+opt-level = "s"
+lto = true
+codegen-units = 1
+strip = true

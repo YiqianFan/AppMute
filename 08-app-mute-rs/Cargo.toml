@@ -1,0 +1,31 @@
+[package]
+name = "app-mute"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+anyhow = "1"
+windows = { version = "0.62", features = [
+    "Win32_Foundation",
+    "Win32_Graphics_Gdi",
+    "Win32_System_Com",
+    "Win32_System_Com_StructuredStorage",
+    "Win32_System_LibraryLoader",
+    "Win32_System_Threading",
+    "Win32_System_Variant",
+    "Win32_Media_Audio",
+    "Win32_Media_Audio_Endpoints",
+    "Win32_UI_Shell",
+    "Win32_UI_WindowsAndMessaging",
+    "Win32_UI_Input_KeyboardAndMouse",
+] }
+toml = "0.8"
+serde = { version = "1", features = ["derive"] }
+log = "0.4"
+simplelog = "0.12"
+
+[profile.release]
+opt-level = "s"
+lto = true
+codegen-units = 1
+strip = true
